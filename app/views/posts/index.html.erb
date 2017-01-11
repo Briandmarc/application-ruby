@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1><a href="posts/">BlogOn</a></h1>
+
+<%= link_to 'Nouveau', new_post_path, class:"new_post" %>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <div class="row">
+    <% @posts.each do |post| %>
+    <div class="col-sm-3">
+      <div class="col-md-12 text-center" id="title-article">
+        <%= post.title %>
+      </div>  
+        <%= image_tag post.image_url, class:"img-responsive" %>
+        <%= post.body %><br>
+        <%= link_to 'Voir', post %>
+        <%= link_to 'Modifier', edit_post_path(post) %>
+        <%= link_to 'Supprimer', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+     </div> 
+    <% end %>
+    </div>
+  </tbody>
+</table>
+
+<br>
+
+
