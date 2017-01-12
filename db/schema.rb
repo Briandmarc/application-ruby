@@ -22,12 +22,6 @@ ActiveRecord::Schema.define(version: 20170111112414) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "paintings", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "image"
-  end
-
   create_table "pictures", force: :cascade do |t|
   end
 
