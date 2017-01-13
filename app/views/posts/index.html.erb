@@ -1,8 +1,10 @@
+ <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 <p id="notice"><%= notice %></p>
 
-<h1><a href="posts/">BlogOn</a></h1>
+<h1><a href="posts/">BlogOn</a></h1><br>
 
-<%= link_to 'Nouveau', new_post_path, class:"new_post" %>
+<%= link_to 'Nouveau', new_post_path, class:"new_post" %><br>
 
 <table>
   <thead>
@@ -17,13 +19,13 @@
     <div class="col-sm-3">
       <div class="col-md-12 text-center" id="title-article">
         <%= post.title %>
-      </div>  
+      </div>
         <%= image_tag post.image_url, class:"img-responsive" %>
         <%= post.body %><br>
         <%= link_to 'Voir', post %>
         <%= link_to 'Modifier', edit_post_path(post) %>
         <%= link_to 'Supprimer', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-     </div> 
+     </div>
     <% end %>
     </div>
   </tbody>
